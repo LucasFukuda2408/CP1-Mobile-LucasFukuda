@@ -27,7 +27,7 @@ export default function App() {
       <Text style = {styles.titulo}>Formulário Cadastrado</Text>
       <View style={styles.form}>
       <TextInput
-      style = {styles.input}npmn
+      style = {styles.input}
       placeholder= "Digite seu nome"
       value= {nome}
       onChangeText={setNome}
@@ -56,15 +56,15 @@ export default function App() {
       onPress={enviarDados}/>
     </View>
     
-  {dadosEnviados && (
+      {dadosEnviados && (
         <View style={styles.resultado}>
-          <Text style={styles.resultadoTitulo}>Os Dados foi enviado: </Text>
+          <Text style={styles.resultadoTitulo}>Os seguintes dados foram enviados: </Text>
           <Text>Nome: {dadosEnviados.nome}</Text>
           <Text>Curso: {dadosEnviados.curso}</Text>
           <Text>Disciplina: {dadosEnviados.disciplina}</Text>
           <Text>Descrição: {dadosEnviados.descricao}</Text>
         </View>
-      )}
+        )}
     </SafeAreaView>
     
   );
@@ -74,7 +74,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding:20,
-    center: 30,
     backgroundColor: "#f2f0f385"
   },
   titulo:{
@@ -93,14 +92,6 @@ const styles = StyleSheet.create({
     color: "#000",
     padding: 10,
     marginBottom: 14,
-    borderRadius: 5,
-  },
-  textArea: {
-    borderWidth: 2,
-    borderColor: "#555",
-    padding: 10,
-    height: 80,
-    marginBottom: 10,
     borderRadius: 5,
   },
   resultado: {
