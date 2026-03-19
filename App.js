@@ -27,7 +27,7 @@ export default function App() {
       <Text style = {styles.titulo}>Formulário Cadastrado</Text>
       <View style={styles.form}>
       <TextInput
-      style = {styles.input}
+      style = {styles.input}npmn
       placeholder= "Digite seu nome"
       value= {nome}
       onChangeText={setNome}
@@ -52,7 +52,8 @@ export default function App() {
       multiline={true}
       numberOfLines={3}
       />
-      <Button title="Enviar" onPress={enviarDados} />
+      <Button title="Enviar" color="#ec0707" 
+      onPress={enviarDados}/>
     </View>
     
   {dadosEnviados && (
@@ -65,7 +66,7 @@ export default function App() {
         </View>
       )}
     </SafeAreaView>
-
+    
   );
 }
 
@@ -73,24 +74,29 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding:20,
+    center: 30,
+    backgroundColor: "#f2f0f385"
   },
   titulo:{
-    fontSize:24,
+    fontSize:26,
     fontWeight:"bold",
-    marginBottom:20,
+    marginBottom:24,
+    color: "blue"
   }, 
   form: {
-    marginBottom: 20,
+    marginBottom: 22,
   },
   input: {
     borderWidth: 1,
-    borderColor: "#555",
+    borderColor: "#080808",
+    backgroundColor: "#d4d2d2",
+    color: "#000",
     padding: 10,
-    marginBottom: 10,
+    marginBottom: 14,
     borderRadius: 5,
   },
   textArea: {
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: "#555",
     padding: 10,
     height: 80,
@@ -100,11 +106,14 @@ const styles = StyleSheet.create({
   resultado: {
     marginTop: 20,
     padding: 15,
-    backgroundColor: "#eee",
+    borderColor: "#080808",
+    backgroundColor: "#d4d2d2",
     borderRadius: 5,
   },
   resultadoTitulo: {
     fontWeight: "bold",
     marginBottom: 10,
+    color: "#25b3eb"
   },
+
 });
